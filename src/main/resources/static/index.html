@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">AI</div>
+            <h2>Spring Chat</h2>
+        </div>
+
+        <button class="new-chat" onclick="newChat()">
+            + New Chat
+        </button>
+
+        <div class="sidebar-info">
+            <p>Powered by</p>
+            <strong>Spring AI + OpenRouter</strong>
+        </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-container">
+
+        <header class="chat-header">
+            <div>
+                <h1>AI Assistant</h1>
+                <span class="status">
+                    <span class="status-dot"></span>
+                    Online
+                </span>
+            </div>
+        </header>
+
+        <!-- Messages -->
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="message assistant">
+                <div class="avatar">AI</div>
+
+                <div class="message-content">
+                    <div class="message-name">Assistant</div>
+                    <div class="bubble">
+                        Hello! 👋<br>
+                        I'm your AI assistant. Ask me anything.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Input -->
+        <div class="input-area">
+
+            <div class="input-box">
+
+                <textarea
+                        id="messageInput"
+                        placeholder="Message your AI assistant..."
+                        rows="1"
+                        onkeydown="handleKeyDown(event)"
+                ></textarea>
+
+                <button id="sendButton" onclick="sendMessage()">
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                AI can make mistakes. Check important information.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
